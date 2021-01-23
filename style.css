@@ -1,0 +1,211 @@
+/* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) 
+  {
+    .header
+    {
+          display: block;
+          width: 100%;
+          height: 100%;
+          float: left;  
+    }
+
+  }
+
+@media only screen and ( min-width: 601px ) and ( max-width: 800px ) {
+     .header 
+     { 
+          display:block; 
+          float: left;
+          width: 100px;
+          height: 100px; 
+     }
+     
+}
+@media only screen and ( min-width: 801px )
+{
+     .header 
+     { 
+          display: inline; 
+          float: left; 
+          width: 100%;
+     }
+     
+}
+.header
+{
+  background: lightgrey;
+}
+marquee
+  {
+  font-style: bold;
+  font-size: 50px;
+  text-align: center;
+  margin: 100px;
+  }
+form.resources
+{
+  margin: 100px
+}
+form.sub
+{
+  margin: 100px
+}
+input{ border: 2px solid grey; padding: 5px;}
+    input:focus{ background: lightyellow; border-color: blue; outline: none;}
+a.blog
+{
+   text-align: center;
+}
+   a.blog:link { color: #FF0000;}
+   a.blog:visited {color: purple;}
+   a.blog:hover {color: red;}
+   a.blog:active {color: #0000FF;}
+   p.blog
+    {
+      font-family: Arial;
+      text-align: left;
+      color: grey;
+    }
+    h2.blog
+    {
+      text-align: center;
+    }
+p.about
+    {
+      font-family: Arial;
+      text-align: left;
+      color: red;
+    }
+    h2.about
+    {
+      text-align: center;
+    }
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width:0.5px;
+    height: 50%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 5;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+body {font-family: "Lato"}
+.mySlides {display: none}
+@keyframes rotating {
+  0%  { transform: rotate(0deg);}
+  100%{ transform: rotate(360deg);}
+}
+img.logo{ animation: rotating 60s linear;float: left;}
+ul{list-style-type:none; text-align:center;}
+li.mode:nth-child(odd){ background: gold;}
+li.mode{}
+footer
+{
+   position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}

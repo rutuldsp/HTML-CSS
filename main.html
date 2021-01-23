@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<title>Index</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+	/* Extra small devices (phones, 600px and down) */
+	@media only screen and (max-width: 600px) 
+  {
+    .header
+    {
+      	  display: block;
+          width: 100%;
+          height: 100%;
+          float: left;  
+    }
+
+  }
+
+@media only screen and ( min-width: 601px ) and ( max-width: 800px ) {
+     .header 
+     { 
+          display:block; 
+          float: left;
+          width: 100px;
+          height: 100px; 
+     }
+     
+}
+@media only screen and ( min-width: 801px )
+{
+     .header 
+     { 
+          display: inline; 
+          float: left; 
+          width: 100%;
+     }
+     
+}
+.header
+{
+  background: lightgrey;
+}
+  marquee
+  {
+  font-style: bold;
+  font-size: 50px;
+  text-align: center;
+  margin: 100px;
+  }
+form.resources
+{
+  margin: 100px
+}
+form.sub
+{
+  margin: 100px
+}
+input{ border: 2px solid grey; padding: 5px;}
+    input:focus{ background: lightyellow; border-color: blue; outline: none;}
+a.blog
+{
+   text-align: center;
+}
+   a.blog:link { color: #FF0000;}
+   a.blog:visited {color: purple;}
+   a.blog:hover {color: red;}
+   a.blog:active {color: #0000FF;}
+   p.blog
+    {
+      font-family: Arial;
+      text-align: left;
+      color: grey;
+    }
+    h2.blog
+    {
+      text-align: center;
+    }
+p.about
+    {
+      font-family: Arial;
+      text-align: left;
+      color: red;
+    }
+    h2.about
+    {
+      text-align: center;
+    }
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width:0.5px;
+    height: 50%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 5;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+body {font-family: "Lato"}
+.mySlides {display: none}
+@keyframes rotating {
+  0%  { transform: rotate(0deg);}
+  100%{ transform: rotate(360deg);}
+}
+img.logo{ animation: rotating 60s linear;float: left;}
+ul{list-style-type:none; text-align:center;}
+li.mode:nth-child(odd){ background: gold;}
+li.mode{}
+footer
+{
+   position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+</style>
+
+<body>
+<div class="w3-top">
+  <div class="header">
+    <div>
+    <img src="./image/logo.jpg" height="50px" width="50px" class="logo" hspace="10px">
+     </div>
+     
+      <a href="#" class="w3-bar-item w3-button w3-padding-large" >HOME</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">RESOURCES<i class="fa fa-caret-down"></i></button>  
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <ul>
+          <li class="mode"><a href="blog.html" class="w3-bar-item w3-button">Blog</a></li>
+          <li class="mode"><a href="subscription.html" class="w3-bar-item w3-button">Subscribe</a></li>
+          <li class="mode"><a href="#" class="w3-bar-item w3-button">Blogs</a></li>
+
+        </ul> 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div>
+<ul class="slides">
+  <input type="radio" name="radio-btn" id="img-1" />
+    <li class="slide-container">
+    <div class="slide">
+      <img src="./image/Desert.jpg" alt="Desert" style="width:110%" />
+        </div>
+    <div class="nav">
+      <label for="img-3" class="prev">&#x2039;</label>
+      <label for="img-2" class="next">&#x203a;</label>
+    </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="./image/Chrysanthemum.jpg" alt="Chrysanthemum" style="width:110%">
+        </div>
+    <div class="nav">
+      <label for="img-1" class="prev">&#x2039;</label>
+      <label for="img-3" class="next">&#x203a;</label>
+    </div>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <img src="./image/Hydrangeas.jpg" alt="Hydrangeas" style="width:110%"/>
+        </div>
+    <div class="nav">
+      <label for="img-2" class="prev">&#x2039;</label>
+      <label for="img-1" class="next">&#x203a;</label>
+    </div>
+    </li>
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+    </li>
+</ul>
+</div>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-dark-gray w3-xlarge">
+  
+  <p class="w3-medium">Powered by <a href="https://www.aliteprojects.com/" target="_blank">@Allite projects</a></p>
+</footer>
+</body>
+</html>
